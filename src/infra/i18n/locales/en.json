@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "about": "About",
+    "competencies": "Skills",
+    "experience": "Experience",
+    "architecture": "Architecture",
+    "contact": "Contact",
+    "skipToContent": "Skip to main content",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "availableStatus": "Open to new challenges",
+    "learnMore": "Learn more",
+    "socialLabel": "Social networks",
+    "githubLabel": "GitHub (opens in new tab)",
+    "linkedinLabel": "LinkedIn (opens in new tab)",
+    "emailLabel": "Send email"
+  },
+  "about": {
+    "label": "// about",
+    "title": "Engineering with purpose",
+    "yearsExperience": "Years of experience",
+    "main": "Main",
+    "alsoWorkWith": "I also work with",
+    "highlights": "Highlights"
+  },
+  "competencies": {
+    "label": "// skills",
+    "title": "Areas of expertise",
+    "description": "Focused on building frontend software that scales, performs, and includes all users."
+  },
+  "experience": {
+    "label": "// experience",
+    "title": "Professional journey",
+    "description": "Track record of technical contributions to highly complex products."
+  },
+  "architecture": {
+    "label": "// architecture",
+    "title": "How this project was built",
+    "description": "This portfolio is a practical example of the principles I advocate.",
+    "projectStructure": "Project Structure",
+    "techStack": "Tech Stack"
+  },
+  "footer": {
+    "letsChat": "Let's talk?",
+    "openToDiscuss": "I'm open to discussing opportunities, projects, or simply exchanging ideas about frontend engineering.",
+    "socialLinks": "Social links",
+    "backToTop": "Back to top",
+    "builtWith": "Built with React + TypeScript"
+  },
+  "profile": {
+    "title": "Frontend Software Engineer",
+    "subtitle": "Architecture • Accessibility • Performance • Scalability",
+    "headline": "I build robust, accessible, and scalable interfaces for highly complex digital products.",
+    "about": "Frontend Software Engineer with strong expertise in application architecture, accessibility (WCAG/ARIA), performance, and legacy system modernization. Experience with React, Angular, AngularJS, TypeScript, microfrontends (Single-SPA), monorepos, design systems, and DDD applied to frontend. Working on large-scale enterprise products, focused on code quality, frontend-backend integration, and sustainable software evolution."
+  },
+  "competencyList": {
+    "architecture": {
+      "title": "Frontend Architecture",
+      "description": "Microfrontends, Monorepos, DDD applied to frontend, domain-based module structuring"
+    },
+    "accessibility": {
+      "title": "Web Accessibility",
+      "description": "WCAG 2.1, ARIA, digital inclusion, keyboard navigation, screen reader support"
+    },
+    "performance": {
+      "title": "Performance & Optimization",
+      "description": "Lazy loading, code splitting, memoization, bundle analysis, Core Web Vitals"
+    },
+    "legacy": {
+      "title": "Legacy Modernization",
+      "description": "Gradual AngularJS migration, incremental refactoring, strangler fig strategies"
+    },
+    "integration": {
+      "title": "Frontend-Backend Integration",
+      "description": "State management, REST/GraphQL APIs, microservices, API contracts"
+    }
+  },
+  "experienceList": {
+    "senior-sistemas": {
+      "company": "Senior Sistemas",
+      "role": "Frontend Software Engineer",
+      "highlights": [
+        "Large-scale frontend application architecture with React, AngularJS, and TypeScript",
+        "DDD implementation in frontend, structuring modules by domain",
+        "Technical reference in accessibility and performance for the entire team",
+        "Legacy system refactoring with gradual migration to modern technologies",
+        "Integration with microservices and .NET/ASP.NET Core APIs"
+      ]
+    },
+    "previous-roles": {
+      "company": "Previous Experience",
+      "role": "Frontend Developer",
+      "highlights": [
+        "Creation of internal libraries and reusable NPM packages",
+        "Design systems development with Figma and Storybook",
+        "POC implementation for new technology validation",
+        "Technical support and mentoring for junior developers",
+        "Continuous elevation of engineering standards in projects"
+      ]
+    }
+  },
+  "architectureList": {
+    "ddd": {
+      "title": "Domain-Driven Design",
+      "description": "Domain-organized structure, separating business rules from presentation layer"
+    },
+    "layers": {
+      "title": "Layer Separation",
+      "description": "UI, domain, and infrastructure isolated, facilitating testing and maintenance"
+    },
+    "components": {
+      "title": "Reusable Components",
+      "description": "Custom design system with design tokens and configurable variants"
+    },
+    "a11y": {
+      "title": "Native Accessibility",
+      "description": "Semantic HTML, ARIA when needed, complete keyboard navigation"
+    },
+    "performance": {
+      "title": "Performance First",
+      "description": "Section lazy loading, memoization, re-render optimization"
+    }
+  },
+  "code": {
+    "philosophy": "philosophy.ts",
+    "focus": "focus",
+    "principle": "principle",
+    "goal": "goal",
+    "focusValues": ["architecture", "accessibility", "performance"],
+    "principleValue": "Clean code is code that others understand",
+    "goalValue": "Real product impact"
+  }
+}

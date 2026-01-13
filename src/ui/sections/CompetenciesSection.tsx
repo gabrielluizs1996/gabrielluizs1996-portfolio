@@ -1,8 +1,27 @@
-import { competencies } from "@/domain/data/profile";
+import { useTranslation } from "react-i18next";
 import { SectionHeading } from "@/ui/components/SectionHeading";
 import { CompetencyCard } from "@/ui/components/CompetencyCard";
 
+const competencyIds = ["architecture", "accessibility", "performance", "legacy", "integration"] as const;
+
+const iconMap: Record<string, string> = {
+  architecture: "Layers",
+  accessibility: "Accessibility",
+  performance: "Zap",
+  legacy: "RefreshCw",
+  integration: "GitBranch",
+};
+
 export function CompetenciesSection() {
+  const { t } = useTranslation();
+
+  const competencies = competencyIds.map((id) => ({
+    id,
+    title: t(`competencyList.${id}.title`),
+    description: t(`competencyList.${id}.description`),
+    icon: iconMap[id],
+  }));
+
   return (
     <section 
       id="competencies" 
@@ -10,9 +29,9 @@ export function CompetenciesSection() {
       aria-labelledby="competencies-heading"
     >
       <SectionHeading
-        label="// competências"
-        title="Áreas de especialização"
-        description="Foco em construir software frontend que escala, performa e inclui todos os usuários."
+        label={t("competencies.label")}
+        title={t("competencies.title")}
+        description={t("competencies.description")}
       />
 
       <div className="grid md:grid-cols-2 gap-6 stagger-children">

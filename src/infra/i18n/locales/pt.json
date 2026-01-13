@@ -1,0 +1,137 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "competencies": "Competências",
+    "experience": "Experiência",
+    "architecture": "Arquitetura",
+    "contact": "Contato",
+    "skipToContent": "Pular para o conteúdo principal",
+    "mainNav": "Navegação principal",
+    "mobileNav": "Menu mobile",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu"
+  },
+  "hero": {
+    "availableStatus": "Disponível para novos desafios",
+    "learnMore": "Conhecer mais",
+    "socialLabel": "Redes sociais",
+    "githubLabel": "GitHub (abre em nova aba)",
+    "linkedinLabel": "LinkedIn (abre em nova aba)",
+    "emailLabel": "Enviar email"
+  },
+  "about": {
+    "label": "// sobre",
+    "title": "Engenharia com propósito",
+    "yearsExperience": "Anos de experiência",
+    "main": "Principal",
+    "alsoWorkWith": "Também trabalho com",
+    "highlights": "Destaques"
+  },
+  "competencies": {
+    "label": "// competências",
+    "title": "Áreas de especialização",
+    "description": "Foco em construir software frontend que escala, performa e inclui todos os usuários."
+  },
+  "experience": {
+    "label": "// experiência",
+    "title": "Trajetória profissional",
+    "description": "Histórico de contribuições técnicas em produtos de alta complexidade."
+  },
+  "architecture": {
+    "label": "// arquitetura",
+    "title": "Como este projeto foi construído",
+    "description": "Este portfólio é um exemplo prático dos princípios que defendo.",
+    "projectStructure": "Estrutura do Projeto",
+    "techStack": "Stack Tecnológica"
+  },
+  "footer": {
+    "letsChat": "Vamos conversar?",
+    "openToDiscuss": "Estou aberto a discutir oportunidades, projetos ou simplesmente trocar ideias sobre engenharia frontend.",
+    "socialLinks": "Links sociais",
+    "backToTop": "Voltar ao topo",
+    "builtWith": "Construído com React + TypeScript"
+  },
+  "profile": {
+    "title": "Engenheiro de Software Frontend",
+    "subtitle": "Arquitetura • Acessibilidade • Performance • Escalabilidade",
+    "headline": "Construo interfaces robustas, acessíveis e escaláveis para produtos digitais de alta complexidade.",
+    "about": "Engenheiro de Software Frontend com forte atuação em arquitetura de aplicações, acessibilidade (WCAG/ARIA), performance e modernização de sistemas legados. Experiência com React, Angular, AngularJS, TypeScript, microfrontends (Single-SPA), monorepos, design systems e DDD aplicado ao frontend. Atuação em produtos corporativos de larga escala, com foco em qualidade de código, integração frontend–backend e evolução sustentável de software."
+  },
+  "competencyList": {
+    "architecture": {
+      "title": "Arquitetura Frontend",
+      "description": "Microfrontends, Monorepos, DDD aplicado ao frontend, estruturação de módulos por domínio"
+    },
+    "accessibility": {
+      "title": "Acessibilidade Web",
+      "description": "WCAG 2.1, ARIA, inclusão digital, navegação por teclado, suporte a leitores de tela"
+    },
+    "performance": {
+      "title": "Performance e Otimização",
+      "description": "Lazy loading, code splitting, memoização, análise de bundle, Core Web Vitals"
+    },
+    "legacy": {
+      "title": "Modernização de Legados",
+      "description": "Migração gradual de AngularJS, refatoração incremental, estratégias de strangler fig"
+    },
+    "integration": {
+      "title": "Integração Frontend–Backend",
+      "description": "Gestão de estado, APIs REST/GraphQL, microsserviços, contratos de API"
+    }
+  },
+  "experienceList": {
+    "senior-sistemas": {
+      "company": "Senior Sistemas",
+      "role": "Engenheiro de Software Frontend",
+      "highlights": [
+        "Arquitetura de aplicações frontend em larga escala com React, AngularJS e TypeScript",
+        "Implementação de DDD no frontend, estruturando módulos por domínio",
+        "Referência técnica em acessibilidade e performance para toda a equipe",
+        "Refatoração de sistemas legados com migração gradual para tecnologias modernas",
+        "Integração com microsserviços e APIs .NET/ASP.NET Core"
+      ]
+    },
+    "previous-roles": {
+      "company": "Experiências Anteriores",
+      "role": "Desenvolvedor Frontend",
+      "highlights": [
+        "Criação de bibliotecas internas e pacotes NPM reutilizáveis",
+        "Desenvolvimento de design systems com Figma e Storybook",
+        "Implementação de POCs para validação de novas tecnologias",
+        "Suporte técnico e mentoria para desenvolvedores júnior",
+        "Elevação contínua do padrão de engenharia em projetos"
+      ]
+    }
+  },
+  "architectureList": {
+    "ddd": {
+      "title": "Domain-Driven Design",
+      "description": "Estrutura organizada por domínios, separando regras de negócio da camada de apresentação"
+    },
+    "layers": {
+      "title": "Separação de Camadas",
+      "description": "UI, domínio e infraestrutura isolados, facilitando testes e manutenção"
+    },
+    "components": {
+      "title": "Componentes Reutilizáveis",
+      "description": "Design system próprio com tokens de design e variantes configuráveis"
+    },
+    "a11y": {
+      "title": "Acessibilidade Nativa",
+      "description": "HTML semântico, ARIA quando necessário, navegação completa por teclado"
+    },
+    "performance": {
+      "title": "Performance First",
+      "description": "Lazy loading de seções, memoização, otimização de re-renderizações"
+    }
+  },
+  "code": {
+    "philosophy": "philosophy.ts",
+    "focus": "foco",
+    "principle": "princípio",
+    "goal": "objetivo",
+    "focusValues": ["arquitetura", "acessibilidade", "performance"],
+    "principleValue": "Código limpo é código que outras pessoas entendem",
+    "goalValue": "Impacto real em produto"
+  }
+}

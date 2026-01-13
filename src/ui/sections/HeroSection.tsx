@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { profileData } from "@/domain/data/profile";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
+  const { t } = useTranslation();
+
   return (
     <section 
       id="hero"
@@ -32,7 +35,7 @@ export function HeroSection() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
             </span>
             <span className="text-sm font-medium text-muted-foreground font-mono">
-              Disponível para novos desafios
+              {t("hero.availableStatus")}
             </span>
           </div>
 
@@ -49,14 +52,14 @@ export function HeroSection() {
             className="text-xl md:text-2xl text-primary font-medium mb-2 animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
-            {profileData.title}
+            {t("profile.title")}
           </p>
           
           <p 
             className="text-lg text-muted-foreground font-mono mb-8 animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
-            {profileData.subtitle}
+            {t("profile.subtitle")}
           </p>
 
           {/* Headline */}
@@ -64,7 +67,7 @@ export function HeroSection() {
             className="text-xl md:text-2xl text-foreground/80 leading-relaxed mb-12 max-w-2xl animate-fade-in"
             style={{ animationDelay: "0.5s" }}
           >
-            {profileData.headline}
+            {t("profile.headline")}
           </p>
 
           {/* CTA and social links */}
@@ -78,12 +81,12 @@ export function HeroSection() {
               className="gap-2 font-medium"
             >
               <a href="#about">
-                Conhecer mais
+                {t("hero.learnMore")}
                 <ArrowDown className="w-4 h-4" aria-hidden="true" />
               </a>
             </Button>
 
-            <nav aria-label="Redes sociais" className="flex items-center gap-1">
+            <nav aria-label={t("hero.socialLabel")} className="flex items-center gap-1">
               <Button 
                 variant="ghost" 
                 size="icon" 
@@ -94,7 +97,7 @@ export function HeroSection() {
                   href={`https://${profileData.contact.github}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="GitHub (abre em nova aba)"
+                  aria-label={t("hero.githubLabel")}
                 >
                   <Github className="w-5 h-5" />
                 </a>
@@ -109,7 +112,7 @@ export function HeroSection() {
                   href={`https://${profileData.contact.linkedin}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn (abre em nova aba)"
+                  aria-label={t("hero.linkedinLabel")}
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
@@ -122,7 +125,7 @@ export function HeroSection() {
               >
                 <a 
                   href={`mailto:${profileData.contact.email}`}
-                  aria-label="Enviar email"
+                  aria-label={t("hero.emailLabel")}
                 >
                   <Mail className="w-5 h-5" />
                 </a>

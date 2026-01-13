@@ -1,20 +1,22 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { profileData } from "@/domain/data/profile";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { LanguageToggle } from "./LanguageToggle";
 
-const navItems = [
-  { href: "#about", label: "Sobre" },
-  { href: "#competencies", label: "Competências" },
-  { href: "#experience", label: "Experiência" },
-  { href: "#architecture", label: "Arquitetura" },
-  { href: "#contact", label: "Contato" },
-];
+const navKeys = ["about", "competencies", "experience", "architecture", "contact"] as const;
 
 export function Navigation() {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const navItems = navKeys.map((key) => ({
+    href: `#${key}`,
+    label: t(`nav.${key}`),
+  }));
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,7 +52,7 @@ export function Navigation() {
     <>
       {/* Skip link for accessibility */}
       <a href="#hero" className="skip-link">
-        Pular para o conteúdo principal
+        {t("nav.skipToContent")}
       </a>
 
       <header
@@ -64,7 +66,7 @@ export function Navigation() {
       >
         <nav
           className="max-w-5xl mx-auto px-6 md:px-8 h-16 flex items-center justify-between"
-          aria-label="Navegação principal"
+          aria-label={t("nav.mainNav")}
         >
           {/* Logo */}
           <a
@@ -77,35 +79,42 @@ export function Navigation() {
           </a>
 
           {/* Desktop navigation */}
-          <ul className="hidden md:flex items-center gap-1" role="list">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md focus-ring link-underline"
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden md:flex items-center gap-1">
+            <ul className="flex items-center gap-1" role="list">
+              {navItems.map((item) => (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors rounded-md focus-ring link-underline"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div className="ml-2 pl-2 border-l border-border">
+              <LanguageToggle />
+            </div>
+          </div>
 
-          {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-menu"
-            aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
-          </Button>
+          {/* Mobile: language toggle + menu button */}
+          <div className="flex md:hidden items-center gap-2">
+            <LanguageToggle />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={isMobileMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
+            </Button>
+          </div>
         </nav>
       </header>
 
@@ -122,7 +131,7 @@ export function Navigation() {
       >
         <nav
           className="flex flex-col items-center justify-center min-h-screen gap-6 p-8"
-          aria-label="Menu mobile"
+          aria-label={t("nav.mobileNav")}
         >
           {navItems.map((item, index) => (
             <a

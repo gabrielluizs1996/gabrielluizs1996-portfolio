@@ -1,8 +1,12 @@
-import { profileData } from "@/domain/data/profile";
+import { useTranslation } from "react-i18next";
 import { SectionHeading } from "@/ui/components/SectionHeading";
 import { Code, Terminal } from "lucide-react";
 
 export function AboutSection() {
+  const { t } = useTranslation();
+
+  const focusValues = t("code.focusValues", { returnObjects: true }) as string[];
+
   return (
     <section 
       id="about" 
@@ -10,15 +14,15 @@ export function AboutSection() {
       aria-labelledby="about-heading"
     >
       <SectionHeading
-        label="// sobre"
-        title="Engenharia com propósito"
+        label={t("about.label")}
+        title={t("about.title")}
       />
 
       <div className="grid lg:grid-cols-5 gap-12 items-start">
         {/* Main content */}
         <div className="lg:col-span-3 space-y-6">
           <p className="text-lg text-foreground leading-relaxed">
-            {profileData.about}
+            {t("profile.about")}
           </p>
           
           <div className="divider-gradient" aria-hidden="true" />
@@ -27,14 +31,14 @@ export function AboutSection() {
           <div className="card-professional font-mono text-sm">
             <div className="flex items-center gap-2 mb-4 text-muted-foreground">
               <Terminal className="w-4 h-4" aria-hidden="true" />
-              <span>philosophy.ts</span>
+              <span>{t("code.philosophy")}</span>
             </div>
             <pre className="text-muted-foreground overflow-x-auto">
               <code>
 {`const approach = {
-  focus: ["arquitetura", "acessibilidade", "performance"],
-  principle: "Código limpo é código que outras pessoas entendem",
-  goal: "Impacto real em produto"
+  ${t("code.focus")}: ${JSON.stringify(focusValues)},
+  ${t("code.principle")}: "${t("code.principleValue")}",
+  ${t("code.goal")}: "${t("code.goalValue")}"
 };`}
               </code>
             </pre>
@@ -42,19 +46,19 @@ export function AboutSection() {
         </div>
 
         {/* Stats/highlights */}
-        <aside className="lg:col-span-2 space-y-6" aria-label="Destaques">
+        <aside className="lg:col-span-2 space-y-6" aria-label={t("about.highlights")}>
           <div className="card-professional text-center">
             <div className="flex items-center justify-center gap-2 mb-2">
               <Code className="w-5 h-5 text-primary" aria-hidden="true" />
               <span className="text-4xl font-bold text-foreground">6+</span>
             </div>
-            <p className="text-muted-foreground">Anos de experiência</p>
+            <p className="text-muted-foreground">{t("about.yearsExperience")}</p>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div className="card-professional text-center py-4">
               <span className="block text-2xl font-bold text-foreground mb-1">React</span>
-              <span className="text-sm text-muted-foreground">Principal</span>
+              <span className="text-sm text-muted-foreground">{t("about.main")}</span>
             </div>
             <div className="card-professional text-center py-4">
               <span className="block text-2xl font-bold text-foreground mb-1">TS</span>
@@ -63,7 +67,7 @@ export function AboutSection() {
           </div>
 
           <div className="card-professional">
-            <h3 className="font-semibold text-foreground mb-3">Também trabalho com</h3>
+            <h3 className="font-semibold text-foreground mb-3">{t("about.alsoWorkWith")}</h3>
             <div className="flex flex-wrap gap-2 text-sm">
               {["Angular", "Single-SPA", "Monorepos", "Design Systems", "Node.js"].map((tech) => (
                 <span 
