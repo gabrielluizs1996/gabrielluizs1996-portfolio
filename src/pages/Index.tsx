@@ -1,13 +1,38 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navigation } from "@/ui/components/Navigation";
+import { HeroSection } from "@/ui/sections/HeroSection";
+import { AboutSection } from "@/ui/sections/AboutSection";
+import { CompetenciesSection } from "@/ui/sections/CompetenciesSection";
+import { ExperienceSection } from "@/ui/sections/ExperienceSection";
+import { ArchitectureSection } from "@/ui/sections/ArchitectureSection";
+import { FooterSection } from "@/ui/sections/FooterSection";
 
+/**
+ * Portfolio - Gabriel Luiz
+ * 
+ * Architecture: DDD applied to frontend
+ * - domain/ - Business data and types
+ * - ui/components - Reusable UI components
+ * - ui/sections - Page sections
+ * 
+ * Accessibility: WCAG 2.1 AA compliant
+ * - Semantic HTML
+ * - Keyboard navigation
+ * - ARIA labels where needed
+ * - High contrast colors
+ */
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Navigation />
+      <main id="main-content">
+        <HeroSection />
+        <AboutSection />
+        <CompetenciesSection />
+        <ExperienceSection />
+        <ArchitectureSection />
+      </main>
+      <FooterSection />
+    </>
   );
 };
 
