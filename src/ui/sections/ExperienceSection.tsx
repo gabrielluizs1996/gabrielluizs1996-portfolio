@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { experiences } from "@/domain/data/profile";
 import { SectionHeading } from "@/ui/components/SectionHeading";
 import { ExperienceCard } from "@/ui/components/ExperienceCard";
+import { AnimatedSection, StaggerContainer, StaggerItem } from "@/ui/components/AnimatedSection";
 
 export function ExperienceSection() {
   const { t } = useTranslation();
@@ -19,17 +20,21 @@ export function ExperienceSection() {
       className="section-container"
       aria-labelledby="experience-heading"
     >
-      <SectionHeading
-        label={t("experience.label")}
-        title={t("experience.title")}
-        description={t("experience.description")}
-      />
+      <AnimatedSection>
+        <SectionHeading
+          label={t("experience.label")}
+          title={t("experience.title")}
+          description={t("experience.description")}
+        />
+      </AnimatedSection>
 
-      <div className="space-y-8 stagger-children">
+      <StaggerContainer className="space-y-8">
         {translatedExperiences.map((experience) => (
-          <ExperienceCard key={experience.id} experience={experience} />
+          <StaggerItem key={experience.id}>
+            <ExperienceCard experience={experience} />
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
     </section>
   );
 }
