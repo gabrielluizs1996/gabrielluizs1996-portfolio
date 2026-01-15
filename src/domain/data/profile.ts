@@ -40,8 +40,8 @@ evolução sustentável de software.`,
 
   contact: {
     email: "gabrielluizs1996@gmail.com",
-    linkedin: "https://www.linkedin.com/in/gabrielluizs1996/",
-    github: "https://github.com/gabrielluizs1996",
+    linkedin: "www.linkedin.com/in/gabrielluizs1996/",
+    github: "github.com/gabrielluizs1996",
   }
 };
 
