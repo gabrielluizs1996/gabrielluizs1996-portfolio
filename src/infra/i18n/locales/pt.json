@@ -11,6 +11,10 @@
     "openMenu": "Abrir menu",
     "closeMenu": "Fechar menu"
   },
+  "theme": {
+    "switchToLight": "Mudar para tema claro",
+    "switchToDark": "Mudar para tema escuro"
+  },
   "hero": {
     "availableStatus": "Disponível para novos desafios",
     "learnMore": "Conhecer mais",

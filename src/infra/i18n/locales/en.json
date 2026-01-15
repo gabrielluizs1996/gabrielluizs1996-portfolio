@@ -11,6 +11,10 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
+  "theme": {
+    "switchToLight": "Switch to light theme",
+    "switchToDark": "Switch to dark theme"
+  },
   "hero": {
     "availableStatus": "Open to new challenges",
     "learnMore": "Learn more",

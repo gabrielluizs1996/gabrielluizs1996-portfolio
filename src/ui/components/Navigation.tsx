@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { LanguageToggle } from "./LanguageToggle";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navKeys = ["about", "competencies", "experience", "architecture", "contact"] as const;
 
@@ -92,13 +93,15 @@ export function Navigation() {
                 </li>
               ))}
             </ul>
-            <div className="ml-2 pl-2 border-l border-border">
+            <div className="ml-2 pl-2 border-l border-border flex items-center gap-1">
+              <ThemeToggle />
               <LanguageToggle />
             </div>
           </div>
 
           {/* Mobile: language toggle + menu button */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="flex md:hidden items-center gap-1">
+            <ThemeToggle />
             <LanguageToggle />
             <Button
               variant="ghost"
