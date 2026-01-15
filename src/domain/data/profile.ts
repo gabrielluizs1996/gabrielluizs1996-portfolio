@@ -39,9 +39,9 @@ de larga escala, com foco em qualidade de código, integração frontend–backe
 evolução sustentável de software.`,
 
   contact: {
-    email: "contato@gabrielluiz.dev",
-    linkedin: "linkedin.com/in/gabrielluiz",
-    github: "github.com/gabrielluiz",
+    email: "gabrielluizs1996@gmail.com",
+    linkedin: "https://www.linkedin.com/in/gabrielluizs1996/",
+    github: "https://github.com/gabrielluizs1996",
   }
 };
 
