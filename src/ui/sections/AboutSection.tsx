@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { SectionHeading } from "@/ui/components/SectionHeading";
 import { Code, Terminal } from "lucide-react";
+import profileImage from "@/assets/gabriel-profile.jpg";
 
 export function AboutSection() {
   const { t } = useTranslation();
@@ -21,9 +22,22 @@ export function AboutSection() {
       <div className="grid lg:grid-cols-5 gap-12 items-start">
         {/* Main content */}
         <div className="lg:col-span-3 space-y-6">
-          <p className="text-lg text-foreground leading-relaxed">
-            {t("profile.about")}
-          </p>
+          {/* Profile photo and intro */}
+          <div className="flex flex-col sm:flex-row gap-6 items-start">
+            <div className="relative shrink-0">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden border-2 border-border shadow-card">
+                <img 
+                  src={profileImage} 
+                  alt="Gabriel Luiz - Frontend Software Engineer"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                />
+              </div>
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-primary rounded-full border-2 border-background" aria-hidden="true" />
+            </div>
+            <p className="text-lg text-foreground leading-relaxed">
+              {t("profile.about")}
+            </p>
+          </div>
           
           <div className="divider-gradient" aria-hidden="true" />
 
