@@ -18,7 +18,7 @@ export function SectionHeading({
   return (
     <header 
       className={cn(
-        "mb-12",
+        "mb-8 sm:mb-12",
         align === "center" && "text-center",
         className
       )}
@@ -26,11 +26,11 @@ export function SectionHeading({
       <span className="section-heading" aria-hidden="true">
         {label}
       </span>
-      <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-4">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-3 sm:mb-4">
         {title}
       </h2>
       {description && (
-        <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
+        <p className="text-base sm:text-lg text-muted-foreground max-w-2xl leading-relaxed">
           {description}
         </p>
       )}

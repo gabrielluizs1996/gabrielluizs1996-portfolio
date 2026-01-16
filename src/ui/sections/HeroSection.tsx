@@ -45,7 +45,7 @@ export function HeroSection() {
       />
 
       <motion.div 
-        className="section-container relative z-10"
+        className="section-container relative z-10 pt-20 sm:pt-0"
         style={{
           y: prefersReducedMotion ? 0 : contentY,
           opacity: prefersReducedMotion ? 1 : contentOpacity,
@@ -53,7 +53,7 @@ export function HeroSection() {
       >
         <div className="max-w-3xl">
           {/* Status indicator */}
-          <div className="flex items-center gap-2 mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+          <div className="flex items-center gap-2 mb-6 sm:mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
@@ -66,21 +66,21 @@ export function HeroSection() {
           {/* Name and title */}
           <h1 
             id="hero-title"
-            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-4 animate-fade-in"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-3 sm:mb-4 animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
             {profileData.name}
           </h1>
           
           <p 
-            className="text-xl md:text-2xl text-primary font-medium mb-2 animate-fade-in"
+            className="text-lg sm:text-xl md:text-2xl text-primary font-medium mb-2 animate-fade-in"
             style={{ animationDelay: "0.3s" }}
           >
             {t("profile.title")}
           </p>
           
           <p 
-            className="text-lg text-muted-foreground font-mono mb-8 animate-fade-in"
+            className="text-base sm:text-lg text-muted-foreground font-mono mb-6 sm:mb-8 animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
             {t("profile.subtitle")}
@@ -88,7 +88,7 @@ export function HeroSection() {
 
           {/* Headline */}
           <p 
-            className="text-xl md:text-2xl text-foreground/80 leading-relaxed mb-12 max-w-2xl animate-fade-in"
+            className="text-lg sm:text-xl md:text-2xl text-foreground/80 leading-relaxed mb-8 sm:mb-12 max-w-2xl animate-fade-in"
             style={{ animationDelay: "0.5s" }}
           >
             {t("profile.headline")}

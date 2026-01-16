@@ -37,7 +37,7 @@ export function CompetenciesSection() {
         />
       </AnimatedSection>
 
-      <StaggerContainer className="grid md:grid-cols-2 gap-6">
+      <StaggerContainer className="grid sm:grid-cols-2 gap-4 sm:gap-6">
         {competencies.map((competency) => (
           <StaggerItem key={competency.id}>
             <CompetencyCard competency={competency} />

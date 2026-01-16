@@ -29,16 +29,16 @@ export function ArchitectureSection() {
         />
       </AnimatedSection>
 
-      <div className="grid lg:grid-cols-2 gap-12">
+      <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
         {/* Architecture explanation */}
-        <StaggerContainer className="space-y-6">
+        <StaggerContainer className="space-y-4 sm:space-y-6">
           <StaggerItem>
             <div className="card-professional">
-              <div className="flex items-center gap-3 mb-4">
-                <FolderTree className="w-5 h-5 text-primary" aria-hidden="true" />
-                <h3 className="font-semibold text-foreground">{t("architecture.projectStructure")}</h3>
+              <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                <FolderTree className="w-5 h-5 text-primary flex-shrink-0" aria-hidden="true" />
+                <h3 className="font-semibold text-foreground text-sm sm:text-base">{t("architecture.projectStructure")}</h3>
               </div>
-              <pre className="font-mono text-sm text-muted-foreground overflow-x-auto">
+              <pre className="font-mono text-xs sm:text-sm text-muted-foreground overflow-x-auto">
 {`src/
 ├── domain/          # Data & business rules
 │   └── data/        # Types & constants
@@ -53,25 +53,25 @@ export function ArchitectureSection() {
 
           <StaggerItem>
             <div className="card-professional">
-              <div className="flex items-center gap-3 mb-4">
-                <FileCode className="w-5 h-5 text-primary" aria-hidden="true" />
-                <h3 className="font-semibold text-foreground">{t("architecture.techStack")}</h3>
+              <div className="flex items-center gap-3 mb-3 sm:mb-4">
+                <FileCode className="w-5 h-5 text-primary flex-shrink-0" aria-hidden="true" />
+                <h3 className="font-semibold text-foreground text-sm sm:text-base">{t("architecture.techStack")}</h3>
               </div>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" aria-hidden="true" />
                   React 18 + TypeScript
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" aria-hidden="true" />
                   Tailwind CSS + Design Tokens
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" aria-hidden="true" />
                   DDD Frontend Architecture
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary" aria-hidden="true" />
+                  <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" aria-hidden="true" />
                   WCAG 2.1 AA Compliance
                 </li>
               </ul>

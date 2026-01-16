@@ -22,23 +22,23 @@ export function AboutSection() {
         />
       </AnimatedSection>
 
-      <div className="grid lg:grid-cols-5 gap-12 items-start">
+      <div className="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
         {/* Main content */}
         <div className="lg:col-span-3 space-y-6">
           {/* Profile photo and intro */}
           <AnimatedSection delay={0.1}>
-            <div className="flex flex-col sm:flex-row gap-6 items-start">
+            <div className="flex flex-col sm:flex-row gap-5 sm:gap-6 items-center sm:items-start">
               <div className="relative shrink-0">
-                <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden border-2 border-border shadow-card">
+                <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-2xl overflow-hidden border-2 border-border shadow-card">
                   <img 
                     src={profileImage} 
                     alt="Gabriel Luiz - Frontend Software Engineer"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                   />
                 </div>
-                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-primary rounded-full border-2 border-background" aria-hidden="true" />
+                <div className="absolute -bottom-2 -right-2 w-5 h-5 sm:w-6 sm:h-6 bg-primary rounded-full border-2 border-background" aria-hidden="true" />
               </div>
-              <p className="text-lg text-foreground leading-relaxed">
+              <p className="text-base sm:text-lg text-foreground leading-relaxed text-center sm:text-left">
                 {t("profile.about")}
               </p>
             </div>
@@ -68,34 +68,35 @@ export function AboutSection() {
 
         {/* Stats/highlights */}
         <aside className="lg:col-span-2" aria-label={t("about.highlights")}>
-          <StaggerContainer className="space-y-6">
-            <StaggerItem>
-              <div className="card-professional text-center">
+          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-4 lg:gap-6">
+            <StaggerItem className="col-span-2 sm:col-span-1 lg:col-span-1">
+              <div className="card-professional text-center h-full">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <Code className="w-5 h-5 text-primary" aria-hidden="true" />
-                  <span className="text-4xl font-bold text-foreground">5+</span>
+                  <span className="text-3xl sm:text-4xl font-bold text-foreground">5+</span>
                 </div>
-                <p className="text-muted-foreground">{t("about.yearsExperience")}</p>
+                <p className="text-sm sm:text-base text-muted-foreground">{t("about.yearsExperience")}</p>
               </div>
             </StaggerItem>
 
             <StaggerItem>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="card-professional text-center py-4">
-                  <span className="block text-2xl font-bold text-foreground mb-1">React</span>
-                  <span className="text-sm text-muted-foreground">{t("about.main")}</span>
-                </div>
-                <div className="card-professional text-center py-4">
-                  <span className="block text-2xl font-bold text-foreground mb-1">TS</span>
-                  <span className="text-sm text-muted-foreground">TypeScript</span>
-                </div>
+              <div className="card-professional text-center py-3 sm:py-4 h-full">
+                <span className="block text-xl sm:text-2xl font-bold text-foreground mb-1">React</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">{t("about.main")}</span>
               </div>
             </StaggerItem>
 
             <StaggerItem>
-              <div className="card-professional">
-                <h3 className="font-semibold text-foreground mb-3">{t("about.alsoWorkWith")}</h3>
-                <div className="flex flex-wrap gap-2 text-sm">
+              <div className="card-professional text-center py-3 sm:py-4 h-full">
+                <span className="block text-xl sm:text-2xl font-bold text-foreground mb-1">TS</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">TypeScript</span>
+              </div>
+            </StaggerItem>
+
+            <StaggerItem className="col-span-2 sm:col-span-3 lg:col-span-1">
+              <div className="card-professional h-full">
+                <h3 className="font-semibold text-foreground mb-3 text-sm sm:text-base">{t("about.alsoWorkWith")}</h3>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 text-xs sm:text-sm">
                   {["Angular", "Single-SPA", "Monorepos", "Design Systems", "Node.js"].map((tech) => (
                     <span 
                       key={tech}

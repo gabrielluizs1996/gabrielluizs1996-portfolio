@@ -208,14 +208,14 @@
 @layer components {
   /* Section container */
   .section-container {
-    @apply max-w-5xl mx-auto px-6 md:px-8;
+    @apply max-w-5xl mx-auto px-4 sm:px-6 md:px-8;
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
   }
 
   /* Card with professional styling */
   .card-professional {
-    @apply rounded-xl border border-border p-6 transition-all duration-300;
+    @apply rounded-lg sm:rounded-xl border border-border p-4 sm:p-6 transition-all duration-300;
     background: var(--gradient-card);
     box-shadow: var(--shadow-soft);
   }
@@ -227,13 +227,13 @@
 
   /* Badge/tag styling */
   .tech-badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+    @apply inline-flex items-center px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs sm:text-sm font-medium;
     @apply bg-accent text-accent-foreground border border-border;
   }
 
   /* Section heading */
   .section-heading {
-    @apply text-sm font-semibold uppercase tracking-widest text-primary mb-4;
+    @apply text-xs sm:text-sm font-semibold uppercase tracking-widest text-primary mb-3 sm:mb-4;
     font-family: var(--font-mono);
   }
 
