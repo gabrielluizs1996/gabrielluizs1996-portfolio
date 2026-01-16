@@ -68,9 +68,10 @@ export function AboutSection() {
 
         {/* Stats/highlights */}
         <aside className="lg:col-span-2" aria-label={t("about.highlights")}>
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-4 lg:gap-6">
-            <StaggerItem className="col-span-2 sm:col-span-1 lg:col-span-1">
-              <div className="card-professional text-center h-full">
+          <StaggerContainer className="flex flex-col gap-4 sm:gap-5 lg:gap-6">
+            {/* Years of experience - full width on all screens */}
+            <StaggerItem>
+              <div className="card-professional text-center">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <Code className="w-5 h-5 text-primary" aria-hidden="true" />
                   <span className="text-3xl sm:text-4xl font-bold text-foreground">5+</span>
@@ -79,22 +80,23 @@ export function AboutSection() {
               </div>
             </StaggerItem>
 
+            {/* Tech stack - side by side */}
             <StaggerItem>
-              <div className="card-professional text-center py-3 sm:py-4 h-full">
-                <span className="block text-xl sm:text-2xl font-bold text-foreground mb-1">React</span>
-                <span className="text-xs sm:text-sm text-muted-foreground">{t("about.main")}</span>
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                <div className="card-professional text-center py-3 sm:py-4">
+                  <span className="block text-xl sm:text-2xl font-bold text-foreground mb-1">React</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">{t("about.main")}</span>
+                </div>
+                <div className="card-professional text-center py-3 sm:py-4">
+                  <span className="block text-xl sm:text-2xl font-bold text-foreground mb-1">TS</span>
+                  <span className="text-xs sm:text-sm text-muted-foreground">TypeScript</span>
+                </div>
               </div>
             </StaggerItem>
 
+            {/* Other technologies */}
             <StaggerItem>
-              <div className="card-professional text-center py-3 sm:py-4 h-full">
-                <span className="block text-xl sm:text-2xl font-bold text-foreground mb-1">TS</span>
-                <span className="text-xs sm:text-sm text-muted-foreground">TypeScript</span>
-              </div>
-            </StaggerItem>
-
-            <StaggerItem className="col-span-2 sm:col-span-3 lg:col-span-1">
-              <div className="card-professional h-full">
+              <div className="card-professional">
                 <h3 className="font-semibold text-foreground mb-3 text-sm sm:text-base">{t("about.alsoWorkWith")}</h3>
                 <div className="flex flex-wrap gap-1.5 sm:gap-2 text-xs sm:text-sm">
                   {["Angular", "Single-SPA", "Monorepos", "Design Systems", "Node.js"].map((tech) => (
