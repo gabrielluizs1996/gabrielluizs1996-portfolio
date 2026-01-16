@@ -2,21 +2,39 @@ import { useTranslation } from "react-i18next";
 import { profileData } from "@/domain/data/profile";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { useRef } from "react";
 
 export function HeroSection() {
   const { t } = useTranslation();
+  const sectionRef = useRef<HTMLElement>(null);
+  const prefersReducedMotion = useReducedMotion();
+  
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"]
+  });
+  
+  // Parallax transforms - subtle movement for depth
+  const gridY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const gridOpacity = useTransform(scrollYProgress, [0, 0.8], [0.03, 0]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
     <section 
+      ref={sectionRef}
       id="hero"
       className="min-h-screen flex flex-col justify-center relative overflow-hidden"
       style={{ background: "var(--gradient-hero)" }}
       aria-labelledby="hero-title"
     >
-      {/* Subtle grid pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.03]"
+      {/* Subtle grid pattern with parallax */}
+      <motion.div 
+        className="absolute inset-0"
         style={{
+          y: prefersReducedMotion ? 0 : gridY,
+          opacity: prefersReducedMotion ? 0.03 : gridOpacity,
           backgroundImage: `
             linear-gradient(to right, hsl(var(--foreground)) 1px, transparent 1px),
             linear-gradient(to bottom, hsl(var(--foreground)) 1px, transparent 1px)
@@ -26,7 +44,13 @@ export function HeroSection() {
         aria-hidden="true"
       />
 
-      <div className="section-container relative z-10">
+      <motion.div 
+        className="section-container relative z-10"
+        style={{
+          y: prefersReducedMotion ? 0 : contentY,
+          opacity: prefersReducedMotion ? 1 : contentOpacity,
+        }}
+      >
         <div className="max-w-3xl">
           {/* Status indicator */}
           <div className="flex items-center gap-2 mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>
@@ -133,7 +157,7 @@ export function HeroSection() {
             </nav>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Scroll indicator */}
       <div 
