@@ -17,7 +17,7 @@ export function ArchitectureCard({
       {/* Timeline dot */}
       <div className="absolute left-0 top-1 w-2 h-2 -translate-x-1/2 rounded-full bg-primary ring-4 ring-background" aria-hidden="true" />
 
-      <div className="card-professional px-0 my-[16px]">
+      <div className="card-professional my-[16px] px-[16px]">
         <div className="flex items-baseline gap-3 mb-2">
           <span className="font-mono text-sm text-primary font-medium" aria-hidden="true">
             0{index + 1}
