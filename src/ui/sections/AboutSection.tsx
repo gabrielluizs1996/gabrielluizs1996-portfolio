@@ -68,8 +68,8 @@ export function AboutSection() {
 
         {/* Stats/highlights */}
         <aside className="lg:col-span-2" aria-label={t("about.highlights")}>
-          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-4 lg:gap-6">
-            <StaggerItem className="col-span-2 sm:col-span-1 lg:col-span-1">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-4 lg:gap-6">
+            <StaggerItem>
               <div className="card-professional text-center h-full">
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <Code className="w-5 h-5 text-primary" aria-hidden="true" />
